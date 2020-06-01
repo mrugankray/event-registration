@@ -18,7 +18,6 @@ class registration(ModelViewSet):
 
 
 class registration2(APIView):
-    permission_classes = (IsAuthenticated,)
 
     def get(self, req, *args, **kwargs):
         all_registrations = Registration.objects.all()
