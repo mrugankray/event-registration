@@ -38,7 +38,13 @@ class registration2(APIView):
         serilizer = RegistrationSerializer(data=req.data)
         if serilizer.is_valid():
             serilizer.save()
-            return Response(serilizer.data, status=status.HTTP_201_CREATED)
+            if serilizer.data['id'] is None:
+                return Response({
+                    "msg": "Please make sure your image is in png or jpeg format and Registration Type should be "
+                           "of 4 types i.e. Self, Group, Corporate, Others."
+                }, status=status.HTTP_400_BAD_REQUEST)
+            else:
+                return Response(serilizer.data, status=status.HTTP_201_CREATED)
         return Response(serilizer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
