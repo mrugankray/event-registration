@@ -13,6 +13,7 @@ class Registration(models.Model):
     reg_type = models.CharField(max_length=9)
     num_of_tickets = models.IntegerField()
     reg_date = models.DateTimeField(auto_now=True)
+    email = models.EmailField(unique=True)
 
     def __str__(self):
         return str(self.id)
