@@ -1,9 +1,5 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
-import os
-'''from rest_framework.response import Response
-from rest_framework import status'''
-from django.core.exceptions import ValidationError
 
 
 class Registration(models.Model):

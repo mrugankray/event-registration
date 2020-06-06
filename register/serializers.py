@@ -6,7 +6,6 @@ import os
 class RegistrationSerializer(serializers.ModelSerializer):
     def validate(self, data):
         file_name, ext = os.path.splitext(str(data['id_card']))
-        print(ext)
 
         accepted_ext = {'.png': True, '.jpeg': True}
         accepted_reg_type = {'self': True, 'group': True, 'corporate': True, 'others': True}
