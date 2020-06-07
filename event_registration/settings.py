@@ -25,7 +25,7 @@ SECRET_KEY = 'e)1uho_x#v!!2!_dqbinks3#$o#f4sc$o&f0lcrx0=$yhr5*^@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['<your username>.pythonanywhere.com']
 
 
 # Application definition
@@ -124,6 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT='/home/<your username>/event-registration/static'
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
